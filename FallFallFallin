@@ -8,6 +8,6 @@ public class FallFallFallin : MonoBehaviour
  
      void FixedUpdate () {
          if (transform.position.y < threshold)
-             transform.position = new Vector3(0, 5, 0);
+             Application.LoadLevel(Application.loadedLevel);
     }
 }
