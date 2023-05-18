@@ -9,7 +9,8 @@ public class RButtonRestart : MonoBehaviour
     {
         
     }
-
+    
+    //Script makes it so that if a player becomes stuck they can press the "R" key on their keyboard and be reset to spawnpoint
     // Update is called once per frame
     void Update()
     {
