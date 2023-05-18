@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//script makes it so if the player falls off the map (below a certain point) they are automatically reset to the spawn point
 public class FallFallFallin : MonoBehaviour
 {
      public float threshold;
