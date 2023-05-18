@@ -5,13 +5,19 @@ using UnityEngine;
 public class BarrelSpawner : MonoBehaviour
 {
 
+    //This script spawns barrels that the player has to either avoid or crash through, slowing them down. The barrels size is randomly selected from an array and the spawn is randomly determined within a range
+    //here are a set of variables that can be adjusted
     public GameObject[] objectPrefabs;
+    //spawnrange for barrels:
     private float spawnRangeX = 10;
+    //spawn location for barrel:
     private float spawnPosZ = 150;
+    //Delay before barrels start spawning:
     private float startDelay = 2;
+    //Delay between each barell spawn
     private float spawnInterval = 1.0f;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         InvokeRepeating("SpawnRandomObject", startDelay, spawnInterval);
@@ -22,7 +28,8 @@ public class BarrelSpawner : MonoBehaviour
     {
 
     }
-
+    
+    //This will select a random barrel from the array and create a prefab
     void SpawnRandomObject()
     {
         int objectIndex = Random.Range(0, objectPrefabs.Length);
