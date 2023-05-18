@@ -5,6 +5,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
 
+    //script allows camera to follow car and adjust the speed at which it follows, how close it follows behind.
     public GameObject Target = null;
 
     public GameObject T = null;
@@ -13,7 +14,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public int index;
 
-
+    //sets the camera to a target on the car
     void Start()
     {
         Target = GameObject.FindGameObjectWithTag("Prometheus");
@@ -26,6 +27,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     }
 
+    //makes camera follow behind car
     void FixedUpdate()
      {
         this.transform.LookAt(Target.transform);
